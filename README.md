@@ -5,8 +5,12 @@ fork from django-registration(-redux)
 
 iaccount is a django app
 
-1. pip install django-mama-cas
 
-2. pip install django-registration-redux
+Quickstart
+----------
 
-3. install this project
+Install with `pip`_::
+
+$ pip install -r requirements.txt
+
+Copy iaccount/local_settings.example.py to iaccount/local_settings.py, and change some configure.

@@ -1,0 +1,5 @@
+Django>1.7
+#-e git://github.com/isoft-linux/django-mama-cas.git@b15555fa55ffdbe1eeebbb476fa078ddc06f58ca#egg=django-mama-cas
+-e git://github.com/isoft-linux/django-mama-cas.git#egg=django-mama-cas
+pinyin
+django-registration-redux==1.4
