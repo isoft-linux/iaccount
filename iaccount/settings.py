@@ -140,6 +140,8 @@ MAMA_CAS_ENABLE_SINGLE_SIGN_OUT = True
 #MAMA_CAS_OAUTH_WEIBO_APP_SECRET = ''
 
 # registration settings
+REGISTRATION_FORM = "iaccount.forms.RegistrationForm"
+
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_EMAIL_SUBJECT_PREFIX = '[iSoft Account Registration]'
 SEND_ACTIVATION_EMAIL = True
