@@ -15,12 +15,11 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'lea9@u3qgigr2*7_j!oo3(ql6@86j&x9@$7fh!d-j6hm6i7c95'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -58,7 +57,7 @@ ROOT_URLCONF = 'iaccount.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,6 +122,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# oauth settings
+#MAMA_CAS_OAUTH_GITHUB_CLIENT_ID = ''                           
+#MAMA_CAS_OAUTH_GITHUB_CLIENT_SECRET = ''
+
+#MAMA_CAS_OAUTH_QQ_APP_ID = ''                                             
+#MAMA_CAS_OAUTH_QQ_APP_KEY = ''                     
+#
+#MAMA_CAS_OAUTH_WEIBO_APP_KEY = ''                                        
+#MAMA_CAS_OAUTH_WEIBO_APP_SECRET = ''
+
+# registration settings
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_EMAIL_SUBJECT_PREFIX = '[iSoft Account Registration]'
 SEND_ACTIVATION_EMAIL = True
@@ -135,3 +145,8 @@ EMAIL_HOST_USER = DEFAULT_FROM_EMAIL
 
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_PORT = 25
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
