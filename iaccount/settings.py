@@ -122,14 +122,21 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# cas server
+MAMA_CAS_ATTRIBUTE_CALLBACKS = ('mama_cas.callbacks.user_info_attributes',)
+MAMA_CAS_FOLLOW_LOGOUT_URL = True
+MAMA_CAS_ENABLE_SINGLE_SIGN_OUT = True
+
 # oauth settings
-#MAMA_CAS_OAUTH_GITHUB_CLIENT_ID = ''                           
+#MAMA_CAS_OAUTH_GITHUB_CLIENT_ID = ''
 #MAMA_CAS_OAUTH_GITHUB_CLIENT_SECRET = ''
 
-#MAMA_CAS_OAUTH_QQ_APP_ID = ''                                             
-#MAMA_CAS_OAUTH_QQ_APP_KEY = ''                     
+# oauth for qq: http://connect.qq.com
+#MAMA_CAS_OAUTH_QQ_APP_ID = ''
+#MAMA_CAS_OAUTH_QQ_APP_KEY = ''
 #
-#MAMA_CAS_OAUTH_WEIBO_APP_KEY = ''                                        
+# oauth for weibo: http://open.weibo.com
+#MAMA_CAS_OAUTH_WEIBO_APP_KEY = ''
 #MAMA_CAS_OAUTH_WEIBO_APP_SECRET = ''
 
 # registration settings
