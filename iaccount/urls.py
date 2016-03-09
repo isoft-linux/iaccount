@@ -24,9 +24,9 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),
     url(r'^admin/', admin.site.urls),
     url(r'^cas/', include('mama_cas.urls')),
-    url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^accounts/login/$', LoginView.as_view(), name='auth_login'),
     url(r'^accounts/logout/$', LogoutView.as_view(), name='auth_logout'),
     url(r'^accounts/profile/', TemplateView.as_view(template_name='profile.html'), name='profile'),
+    url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^', include('django.contrib.auth.urls')),
 ]
