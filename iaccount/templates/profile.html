@@ -24,13 +24,13 @@
     <label for="email">{% trans "Email Address" %}</label>
     <input type="email" class="form-control" id="email" value="{{user.email}}" placeholder="{{user.email}}">
 </div>
-<button  class="btn btn-lg btn-primary btn-danger btn-block" type="submit">{% trans "Reset" %}</button>
+<button  class="btn btn-lg btn-primary btn-danger btn-block" type="button">{% trans "Reset" %}</button>
 </form>
 {% else %}
 <h5>
 <dl class="dl-horizontal">
 <dt class="text-danger">{% trans "ERROR:" %}</dt>
-<dd class="bg-danger">{% trans "You don't have the permission to get it!" %}</dd>
+<dd class="bg-danger">{% trans "Please Login in!" %}</dd>
 </dl>
 </h5>
 {% endif %}
