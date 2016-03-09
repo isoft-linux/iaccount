@@ -1,10 +1,8 @@
-#from registration.users import User
 from registration.forms import User
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
-    #userinfo = get_object_or_404(User, pk=request.POST['username'])
 def resetuserinfo(request, user):
     print(user)
     print(User.objects.all())
