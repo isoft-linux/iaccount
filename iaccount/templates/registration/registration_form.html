@@ -10,30 +10,30 @@
     {% csrf_token %}
     <div class="form-group">
         <input type="text" class="form-control" id="username" name="username"
-        placeholder="{% trans 'username' %}" value="" />
+        placeholder="{% trans 'username' %}" value="" required />
     </div>
     <div class="form-group">
         <input type="text" class="form-control" id="first_name"
         name="first_name"
-        placeholder="{% trans 'first name' %}" value="" />
+        placeholder="{% trans 'first name' %}" value="" required />
     </div>
     <div class="form-group">
         <input type="text" class="form-control" id="last_name" name="last_name"
-        placeholder="{% trans 'last name' %}" value="" />
+        placeholder="{% trans 'last name' %}" value="" required />
     </div>
     <div class="form-group">
         <input type="email" class="form-control" id="email" name="email"
-        placeholder="{% trans 'email address' %}" value="" />
+        placeholder="{% trans 'email address' %}" value="" required />
     </div>
     <div class="form-group">
         <input type="password" class="form-control" id="password1"
         name="password1"
-        placeholder="{% trans 'password' %}" value="" />
+        placeholder="{% trans 'password' %}" value="" required />
     </div>
     <div class="form-group">
         <input type="password" class="form-control" id="password2"
         name="password2"
-        placeholder="{% trans 'repeat password' %}" value="" />
+        placeholder="{% trans 'repeat password' %}" value="" required />
     </div>
     <input class="btn btn-lg btn-primary btn-block" type="submit" value="{% trans 'register' %}" />
 </form>

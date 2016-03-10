@@ -4,7 +4,7 @@
 {% block title %}{% trans "Account Activated" %}{% endblock %}
 
 {% block content %}
-<p>
+<p class="text-center bg-success">
     {% trans "Your account is now activated." %}
     {% if not user.is_authenticated %}
     {% trans "You can log in." %}
