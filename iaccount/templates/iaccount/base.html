@@ -59,7 +59,7 @@
 <body>
     <div id="header" class="container">
     {% block header %}
-    <a href="{% url 'profile' %}">{% trans "Home" %}</a> |
+    <a href="{% url 'profile' %}">{% trans "CAS" %}</a> |
 
     {% if user.is_authenticated %}
         {% trans "Logged in" %}: {{ user.username }}
