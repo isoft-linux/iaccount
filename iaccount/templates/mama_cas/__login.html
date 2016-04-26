@@ -9,10 +9,15 @@
     div#login input[type=text]:focus, input[type=password]:focus { border: 2px solid #f6b179!important; }
     div#login input[type=submit] { background-color: #f24d34; color: white; padding: 9px 30px; width: 92px; border: 1px solid #f24d34!important; border-radius: 4px!important; }
     div#login a { font-size: 8px; text-decoration: none; margin-left: 18px; }
-    div#db { float: left; }
+    div#db { float: left; width: 400px; }
     div#oauth { float: right; }
     div#oauth a { display: block; padding: 6px; }
     div#login h2 { font-size: 12px; }
+
+    @media screen and (max-width:680px) {
+      div#login { width: 400px; }
+      div#oauth { float: left; }
+    }
   </style>
 
 {% extends "mama_cas/__base.html" %}
