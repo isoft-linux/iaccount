@@ -6,25 +6,38 @@
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
 {% if user.is_authenticated %}
-<form  action="" method="post">
+<form  action="{% url 'profilereset' %}" method="post">
 {% csrf_token %}
 <div class="form-group">
     <label for="username">{% trans "User Name" %}</label>
-    <input type="text" class="form-control" id="username" placeholder="{{user.username}}" value="{{user.username}}" readonly>
+    <input type="text" class="form-control" name="username" id="username" placeholder="{{user.username}}" value="{{user.username}}" readonly>
 </div>
 <div class="form-group">
     <label for="first_name">{% trans "First Name" %}</label>
-    <input type="text" class="form-control" id="first_name" value="{{user.first_name}}" placeholder="{{user.first_name}}">
+    <input type="text" class="form-control" name="first_name" id="first_name" value="{{user.first_name}}" placeholder="{{user.first_name}}">
 </div>
 <div class="form-group">
     <label for="last_name">{% trans "Last Name" %}</label>
-    <input type="text" class="form-control" id="last_name" value="{{user.last_name}}" placeholder="{{user.last_name}}">
+    <input type="text" class="form-control" name="last_name" id="last_name" value="{{user.last_name}}" placeholder="{{user.last_name}}">
 </div>
 <div class="form-group">
     <label for="email">{% trans "Email Address" %}</label>
-    <input type="email" class="form-control" id="email" value="{{user.email}}" placeholder="{{user.email}}">
+    <input type="email" class="form-control" name="email" id="email" value="{{user.email}}" placeholder="{{user.email}}">
 </div>
-<button  class="btn btn-lg btn-primary btn-danger btn-block" type="button">{% trans "Reset" %}</button>
+<div class="form-group">
+    <label for="password">{% trans "current password" %}</label>
+    <input type="password" class="form-control" name="password" id="password"
+    value="" placeholder="">
+</div>
+{% if errors %}
+<div class="form-group">
+    <div class="alert alert-danger"><ul>
+        <li>{{ errors }}</li>
+    </ul></div>
+</div>
+{% endif %}
+
+<button  class="btn btn-lg btn-primary btn-danger btn-block" type="submit">{% trans "Reset" %}</button>
 </form>
 {% else %}
 <h5>
