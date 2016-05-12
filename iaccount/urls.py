@@ -19,6 +19,7 @@ from django.contrib.auth import views as auth_views
 from django.views.generic import TemplateView
 from mama_cas.views import LoginView
 from mama_cas.views import LogoutView
+from views import profilereset
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='iaccount/index.html'), name='index'),
@@ -27,6 +28,7 @@ urlpatterns = [
     url(r'^accounts/login/$', LoginView.as_view(), name='auth_login'),
     url(r'^accounts/logout/$', LogoutView.as_view(), name='auth_logout'),
     url(r'^accounts/profile/', TemplateView.as_view(template_name='iaccount/profile.html'), name='profile'),
+    url(r'^accounts/profileset/', profilereset, name='profilereset'),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^', include('django.contrib.auth.urls')),
 ]
