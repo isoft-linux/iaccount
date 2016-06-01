@@ -41,3 +41,19 @@ class RegistrationForm(UserCreationForm):
     class Meta:
         model = User
         fields = ("username", "email", "first_name", "last_name", "captcha")
+
+class RegistrationFormUniqueEmail(RegistrationForm):
+    """
+    Subclass of ``RegistrationForm`` which enforces uniqueness of
+    email addresses.
+
+    """
+    def clean_email(self):
+        """
+        Validate that the supplied email address is unique for the
+        site.
+
+        """
+        if User.objects.filter(email__iexact=self.cleaned_data['email']):
+            raise forms.ValidationError(_("This email address is already in use. Please supply a different email address."))
+        return self.cleaned_data['email']
