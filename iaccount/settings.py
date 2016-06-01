@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'registration',
     'mama_cas',
     'iaccount',
+    'captcha',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -107,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'zh-cn'
+LANGUAGE_CODE = 'zh-hans'
 
 TIME_ZONE = 'UTC'
 
@@ -155,7 +156,7 @@ DEFAULT_FROM_EMAIL = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_HOST_USER = DEFAULT_FROM_EMAIL
 
-EMAIL_HOST = 'smtp.qq.com'
+EMAIL_HOST = 'smtp.exmail.qq.com'
 EMAIL_PORT = 25
 
 try:

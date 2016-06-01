@@ -3,3 +3,4 @@ Django>1.7
 -e git://github.com/isoft-linux/django-mama-cas.git#egg=django-mama-cas
 pinyin
 django-registration-redux==1.4
+django-simple-captcha

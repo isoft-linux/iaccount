@@ -31,4 +31,5 @@ urlpatterns = [
     url(r'^accounts/profileset/', profilereset, name='profilereset'),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^', include('django.contrib.auth.urls')),
+    url(r'^captcha/', include('captcha.urls')),
 ]

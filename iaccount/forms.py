@@ -14,6 +14,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.forms import UserCreationForm
 
 from registration.users import UserModel
+from captcha.fields import CaptchaField
 
 User = UserModel()
 
@@ -35,7 +36,8 @@ class RegistrationForm(UserCreationForm):
     email = forms.EmailField(label=_("E-mail"))
     first_name = forms.CharField(max_length=30, label=_("first name"))
     last_name = forms.CharField(max_length=30, label=_("last name"))
+    captcha = CaptchaField()
 
     class Meta:
         model = User
-        fields = ("username", "email", "first_name", "last_name")
+        fields = ("username", "email", "first_name", "last_name", "captcha")
