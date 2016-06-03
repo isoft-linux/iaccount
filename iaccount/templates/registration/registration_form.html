@@ -1,37 +1,46 @@
+  <style>
+    h1#isoft { font-size: 18px; padding: 0 0 20px 28px; border-bottom: 1px dotted #cecdcd; }
+    input[type=text], input[type=password], input[type=email] { padding: 8px; display:block; box-sizing: border-box; outline: none; border:1px solid #ccc!important; border-radius: 4px!important; width: 355px; height: 40px; }
+    input[type=text]:focus, input[type=password]:focus, input[type=email]:focus { border: 2px solid #f6b179!important; }
+    input[type=submit] { background-color: #f24d34; color: white; padding: 9px 30px; width: 92px; outline: none; border: 1px solid #f24d34!important; border-radius: 4px!important; width: 355px; }
+  </style>
+
 {% extends "registration/registration_base.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "Register for an account" %}{% endblock %}
-
 {% block content %}
+    <iframe src="https://isoft-linux.org/header.php" width="100%" height="120px" scrolling="no" frameborder="0" style="display: block;"></iframe>
+
+    <h1 id="isoft">{% trans "Register for an account" %}</h1>
+
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
 <form method="post" action="">
     {% csrf_token %}
     <div class="form-group">
-        <input type="text" class="form-control" id="username" name="username"
+        <input type="text" class="" id="username" name="username"
         placeholder="{% trans 'username' %}" value="" required />
     </div>
     <div class="form-group">
-        <input type="text" class="form-control" id="first_name"
+        <input type="text" class="" id="first_name"
         name="first_name"
         placeholder="{% trans 'first name' %}" value="" required />
     </div>
     <div class="form-group">
-        <input type="text" class="form-control" id="last_name" name="last_name"
+        <input type="text" class="" id="last_name" name="last_name"
         placeholder="{% trans 'last name' %}" value="" required />
     </div>
     <div class="form-group">
-        <input type="email" class="form-control" id="email" name="email"
+        <input type="email" class="" id="email" name="email"
         placeholder="{% trans 'email address' %}" value="" required />
     </div>
     <div class="form-group">
-        <input type="password" class="form-control" id="password1"
+        <input type="password" class="" id="password1"
         name="password1"
         placeholder="{% trans 'Password' %}" value="" required />
     </div>
     <div class="form-group">
-        <input type="password" class="form-control" id="password2"
+        <input type="password" class="" id="password2"
         name="password2"
         placeholder="{% trans 'Password confirmation' %}" value="" required />
     </div>
@@ -51,7 +60,7 @@
     </div>
     </div>
     {% endif %}
-    <input class="btn btn-lg btn-primary btn-block" type="submit" value="{% trans 'register' %}" />
+    <input class="" type="submit" value="{% trans 'register' %}" />
 </form>
         </div>
     </div>

@@ -4,24 +4,21 @@
 
 <head>
     <title>Central Authentication Service</title>
-    <!-- Weibo -->
-	<meta property="wb:webmaster" content="9323119baaa86a79" />
-    <!-- QQ -->
-    <meta property="qc:admins" content="10703216133756461376454165067277" />
     {% block meta_tags %}
         <meta charset="utf-8">
         <meta name="robots" content="noindex,nofollow">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta property="qc:admins" content="10703216133756461376454165067277" />
     {% endblock meta_tags %}
     <title>
         {% block headtitle %}{% trans "isoft account management system" %}{% endblock headtitle %}
     </title>
     {% block styles %}
-        <link rel="stylesheet" href="//apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <style type="text/css">
             body {
-                background-color: #eee;
+                background-color: white;
             }
             .login-title {
                 color: #555;
@@ -63,7 +60,7 @@
 <body>
     <div id="header" class="container">
     {% block header %}
-    <a href="{% url 'profile' %}">{% trans "Home" %}</a> |
+    <a href="{% url 'profile' %}">{% trans "CAS" %}</a> |
 
     {% if user.is_authenticated %}
         {% trans "Logged in" %}: {{ user.username }}
